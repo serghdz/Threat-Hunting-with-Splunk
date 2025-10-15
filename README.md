@@ -10,4 +10,4 @@ This documentation is a walkthrough on setting up a simple yet effective Splunk 
 - ### Bridged Adapter: Allows the VM to connect directly to the same physical network as the host, enabling communication between the two. Assigns an IP from the hosts subnet by dhcp if available.
 ## Splunk Web interface
 - ### Host Web Browser:  Splunk Web GUI is accessed from the host pc using the assigned IP given to the Splunk server.
--- http://<Splunk Server IP>:8000
+  - http://<Splunk Server IP>:8000
