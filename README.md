@@ -11,3 +11,5 @@ This documentation is a walkthrough on setting up a simple yet effective Splunk 
 ## Splunk Web interface
 - ### Host Web Browser:  Splunk Web GUI is accessed from the host pc using the assigned IP given to the Splunk server.
   - http://<Splunk Server IP>:8000
+
+<img width="1560" height="629" alt="botsv3lab" src="https://github.com/user-attachments/assets/51fe3166-fb22-4894-902f-5d3542a58137" />
