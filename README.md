@@ -7,9 +7,9 @@ This documentation is a walkthrough on setting up a simple yet effective Splunk 
 - **BOTSv3 dataset link**: Available via Github, containing over 2 million+ events
 - **Splunk App/Add-on** (refer to dataset link above)- Required Add-ons for log source compatability
 ## Splunk Virtual Machine Network Configuration
-- ### Bridged Adapter: Allows the VM to connect directly to the same physical network as the host, enabling communication between the two. Assigns an IP from the hosts subnet by dhcp if available.
+- **Bridged Adapter**: Allows the VM to connect directly to the same physical network as the host, enabling communication between the two. Assigns an IP from the hosts subnet by dhcp if available.
 ## Splunk Web interface
-- ### Host Web Browser:  Splunk Web GUI is accessed from the host pc using the assigned IP given to the Splunk server.
+- **Host Web Browser**:  Splunk Web GUI is accessed from the host pc using the assigned IP given to the Splunk server.
   - http://<SplunkServerIP>:8000
 
 <img width="1560" height="629" alt="botsv3lab" src="https://github.com/user-attachments/assets/51fe3166-fb22-4894-902f-5d3542a58137" />
