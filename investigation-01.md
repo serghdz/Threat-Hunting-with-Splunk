@@ -7,4 +7,5 @@ This is my inital investigation with the BOTSv3 dataset, for the purpose of prac
 ```splunk
 index=botsv3 sourcetype=aws:cloudtrail | stats by userIdentity.userName
 ```
+<img width="268" height="366" alt="image" src="https://github.com/user-attachments/assets/6a6ef5ab-fbda-4467-80b1-811290190f23" />
 
