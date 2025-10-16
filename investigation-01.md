@@ -4,4 +4,7 @@ This is my inital investigation with the BOTSv3 dataset, for the purpose of prac
 
 **Identifying Users**:
 
-`index=botsv3 sourcetype=aws:cloudtrail | stats by userIdentity.userName`
+```splunk
+index=botsv3 sourcetype=aws:cloudtrail | stats by userIdentity.userName
+```
+
