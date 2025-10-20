@@ -19,4 +19,4 @@ The Splunk Boss of the SOC (BOTS) Version 3 is a Capture The Flag (CTF) challeng
 
 
 ## Investigations:
-- [Investigation-01]([https://github.com/serghdz/Threat-Hunting-with-Splunk/blob/main/investigation-01.md](https://github.com/serghdz/Threat-Hunting-with-Splunk/blob/main/investigations/investigation-01.md))
+- [Investigation-01](https://github.com/serghdz/Threat-Hunting-with-Splunk/blob/main/investigations/investigation-01.md)
