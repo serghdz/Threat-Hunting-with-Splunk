@@ -60,38 +60,49 @@ Visualization: Bar Chart – “Top 10 IPs by Hit Count”
 
 
 Panel 2: Top 10 Countries by Source IP Volume
-spl
+```spl
 index=botsv3 source=stream:ip
+| table _time src_ip dest_ip
 | iplocation src_ip 
 | stats count by Country 
 | sort - count 
 | head 10
-What I Learned:
+```
 iplocation → geolocates IPs automatically
 Field names are case-sensitive (Country, not country)
 Result: United States led with 516 unique IPs
+
 Visualization: Bar Chart – “Top 10 Countries by Source IPs”
+<img width="928" height="334" alt="image" src="https://github.com/user-attachments/assets/b328748c-1c64-4608-b035-3eb1496b29ec" />
 
 Panel 3: U.S. Top 10 IPs + Maliciousness Check
-spl
+```spl
 index=botsv3 source=stream:ip
 | iplocation src_ip 
 | search Country="United States" 
 | stats count by src_ip 
 | sort - count 
 | head 10 
-| `abuseipdb_check_ip(src_ip)`
-What I Learned:
+| abuseipdbcheck ip=src_ip
+```
+
+
 How to chain commands in a pipeline
 How to integrate threat intelligence via Splunk apps
-Custom commands like `abuseipdb_check_ip()` run API lookups
+Custom commands like `abuseipdbcheck` run API lookups
 Result: All 10 IPs had 0% abuse score → no known threats
+
 Visualization: Table – “Top 10 U.S. IPs + Abuse Score”
+<img width="1372" height="539" alt="image" src="https://github.com/user-attachments/assets/b0f7da4c-5968-4f7c-a77a-cd68434ed278" />
+
 
 3. Dashboard Construction
 Dashboard Creation
 Went to Dashboards > Create New
-Named it: My First Firewall Dashboard
+Named it: Demo Firewall Dashboard
 Chose Classic Dashboard (easier to control)
 Set to Private (for learning)
+
+<img width="922" height="795" alt="image" src="https://github.com/user-attachments/assets/96a1728a-d014-42ab-b60e-7a9353644ca0" />
+
 
