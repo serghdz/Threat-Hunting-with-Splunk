@@ -50,9 +50,10 @@ index=botsv3 source=stream:ip
 ```
 <img width="938" height="607" alt="image" src="https://github.com/user-attachments/assets/93c5bae3-2eb4-4158-91ab-d3757577601a" />
 
-stats count by field → group and count events
-sort - count → descending order
-head 10 → limit to top 10
+- stats count by field → group and count events
+- sort - count → descending order
+- head 10 → limit to top 10
+
 Result: One IP had 25,571 connections → clear red flag
 
 Visualization: Bar Chart – “Top 10 IPs by Hit Count”
@@ -68,8 +69,9 @@ index=botsv3 source=stream:ip
 | sort - count 
 | head 10
 ```
-iplocation → geolocates IPs automatically
-Field names are case-sensitive (Country, not country)
+- iplocation → geolocates IPs automatically
+- Field names are case-sensitive (Country, not country)
+
 Result: United States led with 516 unique IPs
 
 Visualization: Bar Chart – “Top 10 Countries by Source IPs”
@@ -87,9 +89,9 @@ index=botsv3 source=stream:ip
 ```
 
 
-How to chain commands in a pipeline
-How to integrate threat intelligence via Splunk apps
-Custom commands like `abuseipdbcheck` run API lookups
+- Installed and configure the AbuseIPDB app in Splunk, including adding my personal API key to enable live threat intelligence lookups
+- Used command abuseipdbcheck to return real-time reputation fields
+
 Result: All 10 IPs had 0% abuse score → no known threats
 
 Visualization: Table – “Top 10 U.S. IPs + Abuse Score”
