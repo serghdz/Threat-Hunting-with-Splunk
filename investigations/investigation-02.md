@@ -14,7 +14,7 @@
 
 ## Investigation 
 
-> **“How would a real SOC analyst investigate suspicious traffic — and how can I build that into a dashboard?”**
+> **“How would a real SOC analyst investigate suspicious traffic, and how can I build that into a dashboard?”**
 
 With this mindset I asked the following questions: 
 - *What looks suspicious in firewall logs?*  
