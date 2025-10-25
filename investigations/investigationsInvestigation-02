@@ -1,7 +1,6 @@
 # Splunk Cybersecurity Dashboard: Firewall Traffic Analysis  
 *Learning Project – Built by [Your Name]*  
 
----
 
 ## Project Overview  
 **Objective:** I built my **first real-time cybersecurity dashboard** in Splunk to **practice SOC investigation workflows** using the pre-loaded `botsv3` dataset. By analyzing firewall traffic, I learned how to turn raw logs into **actionable security insights** — answering three real-world SOC questions with **SPL queries** and **clear visualizations**.
@@ -14,7 +13,6 @@
 
 **Outcome:** A fully functional **private classic dashboard** with **three interactive panels** — built from scratch to reinforce hands-on SIEM skills.
 
----
 
 ## Investigation Purpose & Context  
 As someone **aspiring to become a SOC analyst**, I wanted to **learn by doing** — not just watch tutorials. Firewall logs are the **front door of network security**, so I chose them to practice **threat detection logic**.
@@ -29,7 +27,7 @@ I started with **zero assumptions** and asked:
 
 This project was my **structured learning lab** — every query, every panel, every decision was a lesson in **investigation, querying, and dashboard design**.
 
----
+
 
 ## Step-by-Step Learning Process  
 
@@ -46,7 +44,7 @@ Instead of guessing, I **brainstormed real SOC questions**:
 
 > *This taught me: Good investigations start with **curiosity**, not code.*
 
----
+
 
 ### 2. Building SPL Queries (3 Core Panels)  
 
