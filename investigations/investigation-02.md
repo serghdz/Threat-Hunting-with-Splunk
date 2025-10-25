@@ -25,38 +25,43 @@ With this mindset I asked the following questions:
 ## Step-by-Step Learning Process  
 
 ### 1. Log Discovery & Asking the Right Questions  
-I opened the `botsv3` index and filtered to `sourcetype=firewall`. Each event showed fields like:  
+I opened the `botsv3` index and filtered to `sourcetype=stream:ip`. Each event showed fields like:  
 - `src_ip` → Who’s initiating traffic?  
 - `dest_ip` → Where are they going?  
 - `_time` → When did it happen?  
+
+<img width="876" height="798" alt="image" src="https://github.com/user-attachments/assets/9bd68871-b589-458f-8992-d01950aae02f" />
 
 Follow-up questions:  
 1. **Is any IP spamming destinations?** *(Scanning? Brute force?)*  
 2. **Which countries are generating the most traffic?** *(Geo-risk context)*  
 3. **Are high-volume IPs known to be malicious?** *(Threat intel check)*  
 
-> *This taught me: Good investigations start with **curiosity**, not code.*
 
+### 2. Building SPL Queries  
 
-
-### 2. Building SPL Queries (3 Core Panels)  
-
-#### Panel 1: Top 10 Source IPs by Connection Count  
+#### Top 10 Source IPs by Connection Count  
 ```spl
-index=botsv3 sourcetype=firewall 
+index=botsv3 source=stream:ip
+| table _time src_ip dest_ip
 | stats count by src_ip 
 | sort - count 
 | head 10
-What I Learned:
+```
+<img width="938" height="607" alt="image" src="https://github.com/user-attachments/assets/93c5bae3-2eb4-4158-91ab-d3757577601a" />
+
 stats count by field → group and count events
 sort - count → descending order
 head 10 → limit to top 10
 Result: One IP had 25,571 connections → clear red flag
+
 Visualization: Bar Chart – “Top 10 IPs by Hit Count”
+<img width="934" height="549" alt="image" src="https://github.com/user-attachments/assets/43953df2-7e0c-4366-8a0e-d7e79e735e99" />
+
 
 Panel 2: Top 10 Countries by Source IP Volume
 spl
-index=botsv3 sourcetype=firewall 
+index=botsv3 source=stream:ip
 | iplocation src_ip 
 | stats count by Country 
 | sort - count 
@@ -69,7 +74,7 @@ Visualization: Bar Chart – “Top 10 Countries by Source IPs”
 
 Panel 3: U.S. Top 10 IPs + Maliciousness Check
 spl
-index=botsv3 sourcetype=firewall 
+index=botsv3 source=stream:ip
 | iplocation src_ip 
 | search Country="United States" 
 | stats count by src_ip 
