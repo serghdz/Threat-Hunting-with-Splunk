@@ -15,16 +15,12 @@
 ## Investigation Purpose & Context  
 As someone **aspiring to become a SOC analyst**, I wanted to **learn by doing** — not just watch tutorials. Firewall logs are the **front door of network security**, so I chose them to practice **threat detection logic**.
 
-My goal was simple:  
 > **“How would a real SOC analyst investigate suspicious traffic — and how can I build that into a dashboard?”**
 
-I started with **zero assumptions** and asked:  
+With this mindset I asked the following questions: 
 - *What looks suspicious in firewall logs?*  
 - *How do I find it using SPL?*  
 - *How do I present it so another analyst can act fast?*
-
-This project was my **structured learning lab** — every query, every panel, every decision was a lesson in **investigation, querying, and dashboard design**.
-
 
 
 ## Step-by-Step Learning Process  
