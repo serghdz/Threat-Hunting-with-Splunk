@@ -1,7 +1,7 @@
 # Splunk Cybersecurity Dashboard: Firewall Traffic Analysis  
 
 ## Project Overview  
-**Objective:** I built my **first real-time cybersecurity dashboard** in Splunk to **practice SOC investigation workflows** using the pre-loaded `botsv3` dataset. By analyzing firewall traffic, I learned how to turn raw logs into **actionable security insights** — answering three real-world SOC questions with **SPL queries** and **clear visualizations**.
+**Objective:** Created a Splunk Dashboard to **practice SOC investigation workflows** using the pre-loaded `botsv3` dataset. By analyzing firewall traffic, I learned how to turn raw logs into **actionable security insights** 
 
 **Tools Used:**  
 - Splunk Enterprise (pre-configured local instance)  
