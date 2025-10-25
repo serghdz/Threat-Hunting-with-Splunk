@@ -40,7 +40,7 @@ Follow-up questions:
 
 ### 2. Building SPL Queries  
 
-#### Top 10 Source IPs by Connection Count  
+#### Panel 1: Top 10 Source IPs by Connection Count  
 ```spl
 index=botsv3 source=stream:ip
 | table _time src_ip dest_ip
@@ -60,7 +60,7 @@ Visualization: Bar Chart – “Top 10 IPs by Hit Count”
 <img width="934" height="549" alt="image" src="https://github.com/user-attachments/assets/43953df2-7e0c-4366-8a0e-d7e79e735e99" />
 
 
-Panel 2: Top 10 Countries by Source IP Volume
+### Panel 2: Top 10 Countries by Source IP Volume
 ```spl
 index=botsv3 source=stream:ip
 | table _time src_ip dest_ip
@@ -77,7 +77,7 @@ Result: United States led with 516 unique IPs
 Visualization: Bar Chart – “Top 10 Countries by Source IPs”
 <img width="928" height="334" alt="image" src="https://github.com/user-attachments/assets/b328748c-1c64-4608-b035-3eb1496b29ec" />
 
-Panel 3: U.S. Top 10 IPs + Maliciousness Check
+### Panel 3: U.S. Top 10 IPs + Maliciousness Check
 ```spl
 index=botsv3 source=stream:ip
 | iplocation src_ip 
