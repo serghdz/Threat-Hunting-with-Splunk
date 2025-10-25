@@ -12,8 +12,7 @@
 **Outcome:** A fully functional **private classic dashboard** with **three interactive panels** — built from scratch to reinforce hands-on SIEM skills.
 
 
-## Investigation Purpose & Context  
-As someone **aspiring to become a SOC analyst**, I wanted to **learn by doing** — not just watch tutorials. Firewall logs are the **front door of network security**, so I chose them to practice **threat detection logic**.
+## Investigation 
 
 > **“How would a real SOC analyst investigate suspicious traffic — and how can I build that into a dashboard?”**
 
