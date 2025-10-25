@@ -30,7 +30,7 @@ I opened the `botsv3` index and filtered to `sourcetype=firewall`. Each event sh
 - `dest_ip` → Where are they going?  
 - `_time` → When did it happen?  
 
-Instead of guessing, I **brainstormed real SOC questions**:  
+Follow-up questions:  
 1. **Is any IP spamming destinations?** *(Scanning? Brute force?)*  
 2. **Which countries are generating the most traffic?** *(Geo-risk context)*  
 3. **Are high-volume IPs known to be malicious?** *(Threat intel check)*  
