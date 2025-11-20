@@ -12,6 +12,8 @@ This documentation is a walkthrough on setting up a simple yet effective Splunk 
 - **Host Web Browser**:  Splunk Web GUI is accessed from the host pc using the assigned IP given to the Splunk server.
   - http://<SplunkServerIP>:8000
 
+  Link to set up guide: [Setting up Splunk](https://github.com/serghdz/Threat-Hunting-with-Splunk/blob/main/Setting%20up%20Splunk.md)
+
 <img width="1560" height="629" alt="botsv3lab" src="https://github.com/user-attachments/assets/51fe3166-fb22-4894-902f-5d3542a58137" />
 
 ## Scenario:
